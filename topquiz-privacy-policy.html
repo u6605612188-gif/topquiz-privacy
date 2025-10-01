@@ -1,95 +1,327 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!doctype html>
+<html lang="pt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Política de Privacidade - TopQuiz</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Política de Privacidade — TopQuiz</title>
+  <meta name="description" content="Política de Privacidade do aplicativo TopQuiz." />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 20px;
-      color: #333;
-      max-width: 900px;
+    :root{
+      --bg:#0f1220;--card:#161a2f;--muted:#aab1c6;--text:#eef2ff;
+      --accent:#6ea8fe;--ok:#36c56a;--warn:#f9c74f;--danger:#ff6b6b
     }
-    h1, h2 {
-      color: #222;
-    }
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue","Noto Sans",Arial}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:980px;margin:0 auto;padding:28px 18px 80px}
+    header{margin-bottom:16px}
+    h1{font-size:1.9rem;margin:.2rem 0}
+    .badge{display:inline-block;background:#1e243f;color:var(--muted);padding:2px 10px;border-radius:999px;font-size:.82rem;margin-left:.4rem}
+    .card{background:var(--card);border:1px solid #232848;border-radius:14px;padding:18px;margin:14px 0}
+    h2{margin:10px 0 6px;font-size:1.25rem}
+    h3{margin:14px 0 6px;font-size:1.05rem;color:var(--muted)}
+    .muted{color:var(--muted)}
+    ul{padding-left:18px}
+    code{background:#1b2038;border:1px solid #262b45;border-radius:6px;padding:0 5px}
+    table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #232848;border-radius:12px;overflow:hidden}
+    th,td{padding:10px;border-bottom:1px solid #232848;vertical-align:top}
+    th{background:#1b2038;color:#cfd6ee;text-align:left}
+    tr:last-child td{border-bottom:none}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+    .chip{background:#1e243f;border:1px solid #2a3256;color:#c7ceea;padding:4px 10px;border-radius:999px;font-size:.82rem}
+    .ok{color:var(--ok)} .warn{color:var(--warn)} .danger{color:var(--danger)}
+    .grid{display:grid;gap:14px}
+    @media (min-width:760px){ .grid{grid-template-columns:1fr 1fr} }
+    footer{margin-top:34px;color:#93a0c6}
+    .kbd{border:1px solid #2c3356;border-bottom-width:3px;border-radius:6px;padding:2px 6px;background:#1b2038}
   </style>
 </head>
 <body>
-  <h1>Política de Privacidade - TopQuiz</h1>
-  <p>
-    A sua privacidade é importante para nós. Esta Política de Privacidade descreve como o aplicativo <strong>TopQuiz</strong>
-    coleta, utiliza e protege as informações pessoais dos usuários.
-  </p>
+  <div class="wrap">
+    <header>
+      <h1>Política de Privacidade <span class="badge">TopQuiz</span></h1>
+      <div class="muted">Última atualização: 01/10/2025 • Desenvolvedor: Maicon Tavares</div>
+    </header>
 
-  <h2>1. Informações Coletadas</h2>
-  <p>
-    O <strong>TopQuiz</strong> pode coletar as seguintes informações:
-  </p>
-  <ul>
-    <li>Nome e endereço de e-mail usados no cadastro ou login;</li>
-    <li>Dados de autenticação fornecidos via Google ou Firebase;</li>
-    <li>Informações de desempenho do aplicativo (erros, falhas, métricas anônimas);</li>
-    <li>Dados necessários para manter sua conta e progresso dentro do app.</li>
-  </ul>
+    <div class="card">
+      <p>
+        Esta Política descreve como o <strong>TopQuiz</strong> (com Start.io, Unity Ads, Google AdMob e Firebase) recolhe,
+        usa, partilha e protege dados. Esta Política espelha o Formulário de Segurança de Dados da Play Console
+        para garantir consistência na revisão.
+      </p>
+      <p class="muted">
+        Ao utilizar o app, você concorda com as práticas abaixo. Em caso de dúvidas, contacte-nos:
+        <a href="mailto:topquiz.suporte.app@gmail.com">topquiz.suporte.app@gmail.com</a> ·
+        <a href="https://wa.me/351961780568" target="_blank" rel="noopener">WhatsApp +351 961 780 568</a>.
+      </p>
+    </div>
 
-  <h2>2. Uso das Informações</h2>
-  <p>As informações coletadas são utilizadas para:</p>
-  <ul>
-    <li>Permitir login e gerenciamento da sua conta;</li>
-    <li>Fornecer acesso às funcionalidades do aplicativo;</li>
-    <li>Garantir a segurança da conta e prevenir abusos;</li>
-    <li>Melhorar a experiência do usuário e corrigir falhas técnicas;</li>
-    <li>Atender requisitos legais ou solicitações regulatórias.</li>
-  </ul>
+    <!-- 1. Tipos de dados -->
+    <div class="card">
+      <h2>1) Tipos de dados tratados</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Categoria</th>
+            <th>Exemplos</th>
+            <th>Coleta</th>
+            <th>Partilha</th>
+            <th>Efémero?</th>
+            <th>Finalidades</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Dados de conta</strong></td>
+            <td>E-mail, nome (Firebase Auth). Opcional: avatar local.</td>
+            <td>Recolhidos</td>
+            <td>Partilhado com Firebase Auth</td>
+            <td>Não</td>
+            <td>
+              Gestão de conta; Autenticação; Funcionalidade da app.
+              <div class="chips">
+                <span class="chip">Gestão da conta</span>
+                <span class="chip">Funcionalidade</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Informações financeiras</strong></td>
+            <td>Histórico de ganhos no app (pontos, carteira em centavos). <em>Não</em> recolhemos IBAN/tarjeta.</td>
+            <td>Recolhidos</td>
+            <td>Não (somente dentro do Firebase do próprio app)</td>
+            <td>Não</td>
+            <td>
+              Funcionalidade (saldo/premiações); Prevenção antifraude e auditoria.
+              <div class="chips">
+                <span class="chip">Funcionalidade</span>
+                <span class="chip">Segurança/Conformidade</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Informações de pagamento do utilizador</strong></td>
+            <td>Pedidos de saque: nome do recebedor, chave PIX e tipo da chave.</td>
+            <td>Recolhidos</td>
+            <td>Não (apenas Firestore). Admin vê para processar o pagamento.</td>
+            <td>Não</td>
+            <td>
+              Processamento de saques; Conformidade e auditoria.
+              <div class="chips">
+                <span class="chip">Funcionalidade</span>
+                <span class="chip">Segurança/Conformidade</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Histórico de compras</strong></td>
+            <td>Não vendemos itens; registramos transações internas (p.ex. saque).</td>
+            <td>Recolhidos</td>
+            <td>Não</td>
+            <td>Não</td>
+            <td>
+              Funcionalidade (histórico/recibos); Auditoria.
+              <div class="chips">
+                <span class="chip">Funcionalidade</span>
+                <span class="chip">Segurança/Conformidade</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Identificadores & dispositivos</strong></td>
+            <td>ID de anúncios (AAID), IP aproximado, modelo do dispositivo (via SDKs de anúncios/analytics).</td>
+            <td>Recolhidos</td>
+            <td>Partilhado com AdMob, Unity Ads, Start.io, Firebase</td>
+            <td>Não</td>
+            <td>
+              Publicidade/marketing; Medição; Análise e estabilidade.
+              <div class="chips">
+                <span class="chip">Publicidade/Marketing</span>
+                <span class="chip">Análise</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Dados de uso</strong></td>
+            <td>Eventos de sessão, telas vistas, engajamento (Firebase Analytics).</td>
+            <td>Recolhidos</td>
+            <td>Partilhado com Firebase</td>
+            <td>Não</td>
+            <td>
+              Análise, performance e melhorias.
+              <div class="chips">
+                <span class="chip">Análise</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Mensagens de suporte</strong></td>
+            <td>Conteúdo do ticket, status, timestamps.</td>
+            <td>Recolhidos</td>
+            <td>Não</td>
+            <td>Não</td>
+            <td>
+              Comunicações do programador; Atendimento ao cliente.
+              <div class="chips">
+                <span class="chip">Comunicações</span>
+                <span class="chip">Funcionalidade</span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="muted">
+        Não recolhemos dados sensíveis (saúde, contatos, fotos privadas, microfone/câmera) nem localização precisa.
+      </p>
+    </div>
 
-  <h2>3. Compartilhamento</h2>
-  <p>
-    O <strong>TopQuiz</strong> não vende nem compartilha suas informações pessoais com terceiros,
-    exceto quando necessário para:
-  </p>
-  <ul>
-    <li>Cumprir obrigações legais;</li>
-    <li>Prover funcionalidades essenciais por meio de serviços de terceiros (ex.: Firebase, Google Play Services, AdMob).</li>
-  </ul>
+    <!-- 2. Base legal & opt-out -->
+    <div class="card">
+      <h2>2) Base legal, consentimento e opções</h2>
+      <ul>
+        <li><strong>Execução do serviço</strong>: autenticação, ranking, carteira, saques.</li>
+        <li><strong>Interesse legítimo</strong>: segurança/antifraude, métricas essenciais.</li>
+        <li><strong>Consentimento</strong>: personalização de anúncios quando aplicável pela rede de anúncios.</li>
+      </ul>
+      <h3>Controlo do utilizador</h3>
+      <ul>
+        <li>Você pode desativar <strong>personalização de anúncios</strong> no Android: <span class="kbd">Configurações &gt; Google &gt; Anúncios</span> (ou equivalente) e redefinir o ID de anúncios.</li>
+        <li>Se não aceitar termos/política, poderá deixar de usar o app e solicitar a exclusão da conta (ver Sec. 8).</li>
+      </ul>
+    </div>
 
-  <h2>4. Segurança</h2>
-  <p>
-    Todas as informações transmitidas pelo <strong>TopQuiz</strong> são criptografadas em trânsito.
-    Utilizamos boas práticas de segurança para proteger os dados armazenados.
-  </p>
+    <!-- 3. SDKs -->
+    <div class="card">
+      <h2>3) Parceiros/SDKs</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Google AdMob (Publicidade)</h3>
+          <ul>
+            <li>Finalidade: exibição e medição de anúncios.</li>
+            <li>Dados: AAID, IP parcial, sinais do dispositivo, desempenho do anúncio.</li>
+            <li>Política: <a target="_blank" rel="noopener" href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Unity Ads (Publicidade)</h3>
+          <ul>
+            <li>Finalidade: interstitial/rewarded e medição.</li>
+            <li>Dados: identificadores do device/ads, métricas de exibição.</li>
+            <li>Política: <a target="_blank" rel="noopener" href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Start.io (Banners)</h3>
+          <ul>
+            <li>Finalidade: exibição de banners e medição.</li>
+            <li>Dados: identificadores do device/ads, métricas de exibição.</li>
+            <li>Política: <a target="_blank" rel="noopener" href="https://www.start.io/policy/privacy-policy/">start.io/policy/privacy-policy</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Firebase (Auth/Firestore/Analytics)</h3>
+          <ul>
+            <li>Finalidade: login/conta, carteira/saques, telemetria de uso.</li>
+            <li>Dados: e-mail/UID, saldos, tickets, eventos de app.</li>
+            <li>Política: <a target="_blank" rel="noopener" href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-  <h2>5. Retenção e Exclusão de Dados</h2>
-  <p>
-    Seus dados são mantidos enquanto sua conta estiver ativa.  
-    Você pode solicitar a exclusão da sua conta e dados associados a qualquer momento, enviando um pedido por e-mail:
-  </p>
-  <p>
-    <a href="mailto:maicontavares503@gmail.com">maicontavares503@gmail.com</a>
-  </p>
+    <!-- 4. Retenção -->
+    <div class="card">
+      <h2>4) Retenção</h2>
+      <ul>
+        <li><strong>Conta/Carteira/Saques:</strong> mantidos enquanto a conta estiver ativa e pelo período necessário a obrigações legais/auditoria (normalmente até 5 anos após encerramento).</li>
+        <li><strong>Eventos de analytics/ads:</strong> conforme políticas de cada parceiro (tipicamente 2 a 26 meses).</li>
+        <li><strong>Suporte:</strong> tickets mantidos até 24 meses, salvo obrigação legal.</li>
+      </ul>
+    </div>
 
-  <h2>6. Alterações a esta Política</h2>
-  <p>
-    Esta Política de Privacidade pode ser atualizada periodicamente.  
-    Recomendamos que você revise esta página regularmente para estar ciente de quaisquer mudanças.
-  </p>
+    <!-- 5. Segurança -->
+    <div class="card">
+      <h2>5) Segurança</h2>
+      <ul>
+        <li>Criptografia em trânsito (HTTPS/TLS) e regras do Firestore para acesso mínimo necessário.</li>
+        <li>Controles de acesso e logs administrativos para operações de pagamento/saque.</li>
+        <li>Monitorização antifraude (padrões de uso anômalos, limites mensais, IPs suspeitos).</li>
+      </ul>
+    </div>
 
-  <h2>7. Contato</h2>
-  <p>
-    Caso tenha dúvidas ou solicitações relacionadas à privacidade e proteção de dados, entre em contato pelo e-mail:  
-    <a href="mailto:maicontavares503@gmail.com">maicontavares503@gmail.com</a>
-  </p>
+    <!-- 6. Transferências internacionais -->
+    <div class="card">
+      <h2>6) Transferências internacionais</h2>
+      <p>
+        Os dados podem ser processados fora do seu país via Firebase/Google, Unity e Start.io, respeitando
+        mecanismos de transferência aplicáveis (por ex., Cláusulas Contratuais Padrão) definidos por cada fornecedor.
+      </p>
+    </div>
 
-  <p><em>Última atualização: Setembro/2025</em></p>
+    <!-- 7. Crianças -->
+    <div class="card">
+      <h2>7) Crianças</h2>
+      <p>
+        O TopQuiz é destinado a público geral e não é direcionado a menores de 13 anos. Não coletamos conscientemente
+        dados de crianças. Se você acredita que uma criança nos forneceu dados, contacte-nos para remoção.
+      </p>
+    </div>
+
+    <!-- 8. Seus direitos -->
+    <div class="card">
+      <h2>8) Seus direitos & como exercer</h2>
+      <ul>
+        <li>Acesso/Correção: peça uma cópia dos dados ou correções.</li>
+        <li>Exclusão de conta: solicite apagar a conta e dados associados (sujeito a retenção legal mínima).</li>
+        <li>Oposição/Restrição: onde aplicável, pode se opor a certos tratamentos.</li>
+        <li>Portabilidade: onde aplicável, podemos fornecer exportação dos principais dados de conta.</li>
+      </ul>
+      <p>
+        Faça seu pedido pelo e-mail <a href="mailto:topquiz.suporte.app@gmail.com">topquiz.suporte.app@gmail.com</a>
+        ou pelo <a href="https://wa.me/351961780568" target="_blank" rel="noopener">WhatsApp +351 961 780 568</a>.
+        Para sua segurança, poderemos solicitar verificação (ex.: confirmar e-mail de login).
+      </p>
+      <h3>Autoexclusão dentro do app</h3>
+      <p class="muted">
+        Você pode solicitar exclusão via: <em>Perfil &gt; Suporte</em> (mensagem: “excluir minha conta”). Alternativamente,
+        use os contactos acima. Apagaremos a conta e dados de app, preservando apenas o que for exigido por lei (ex.: registos de pagamento).
+      </p>
+    </div>
+
+    <!-- 9. Publicidade & medição -->
+    <div class="card">
+      <h2>9) Publicidade, medição e personalização</h2>
+      <ul>
+        <li>Exibimos anúncios (banners, interstitial, rewarded). Parceiros podem usar AAID e sinais de dispositivo para personalizar e medir.</li>
+        <li>Você pode desativar a personalização no Android (definições do Google &gt; Anúncios) e redefinir seu AAID.</li>
+        <li>Mesmo com opt-out, anúncios não personalizados e medições essenciais podem ocorrer.</li>
+      </ul>
+    </div>
+
+    <!-- 10. Alterações -->
+    <div class="card">
+      <h2>10) Alterações desta política</h2>
+      <p>
+        Podemos atualizar esta Política. Publicaremos a versão vigente nesta página e ajustaremos a data no topo.
+        Mudanças materiais serão destacadas no app (ex.: aviso dentro do Perfil).
+      </p>
+    </div>
+
+    <!-- 11. Contacto -->
+    <div class="card">
+      <h2>11) Contacto</h2>
+      <p>
+        E-mail: <a href="mailto:topquiz.suporte.app@gmail.com">topquiz.suporte.app@gmail.com</a><br/>
+        WhatsApp: <a href="https://wa.me/351961780568" target="_blank" rel="noopener">+351 961 780 568</a>
+      </p>
+      <p class="muted">
+        Preferimos mensagens no app em <em>Perfil &gt; Suporte</em> para localizar sua conta mais rápido.
+      </p>
+    </div>
+
+    <footer>
+      © TopQuiz — Todos os direitos reservados.
+    </footer>
+  </div>
 </body>
 </html>
-
